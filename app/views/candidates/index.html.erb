@@ -1,0 +1,28 @@
+<div class='container-fluid'>
+  <div class='container mt-5'>
+    <%= render partial: 'alert', locals: { object: @candidates } %>
+    <% @candidates.each do |candidate| %>
+      <div class='row mb-4 justify-content-center'>
+        <div class='col-sm-8'>
+          <div class='card card-hover border border-primary'>
+            <div class='card-body'>
+              <h5 class='card-title'><%= t('.developer_html', person: candidate.id) %></h5>
+              <hr>
+              <p class='card-text'>
+                <ul>
+                  <li><%= t('.place', place: candidate.city) %></li>
+                  <li><%= t('.experience', years: candidate.experience) %></li>
+                  <li><%= t('.technologies') %>
+                   |<% candidate.technologies.each do |tech| %>
+                        <%= t('.technology', name: tech['name']) %>
+                    <% end %>
+                  </li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

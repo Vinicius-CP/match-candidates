@@ -1,0 +1,27 @@
+pt-BR:
+  layouts:
+    application:
+      tech_jobs: Tech Jobs
+  candidates:
+    index:
+      developer_html: 'Pessoa Desenvolvedora <span>#%{person}</span>'
+      place: 'Localização: %{place}'
+      experience: 'Experiência: %{years} anos de experiência'
+      technologies: 'Tecnologias:'
+      technology: '%{name} |'
+    search:
+      candidates: Candidatos de Tecnologia
+      select_filters: Selecione os filtros abaixo
+      search_candidates: Buscar Candidatos
+      candidates_from: Candidatos de
+      to_work_with: para trabalhar com
+      those_have: que possuem
+      placeholder:
+        city: São Paulo
+        technology: jQuery
+        experience: 2 anos ou mais de experiência
+      button:
+        search: Buscar
+    alert:
+      found: 'Foram encontradas %{unity} vagas para Desenvolvedor %{name} :)'
+      not_found: 'Foram encontradas 0 vagas para Desenvolvedor %{name} :('

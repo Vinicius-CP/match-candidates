@@ -1,0 +1,32 @@
+<div class='container-fluid'>
+  <h1 class='text-center mt-5 mb-5 title'><%= t('.candidates') %></h1>
+  <div class='container'>
+    <div class='card border border-primary'>
+      <h4 class='card-header'><%= t('.search_candidates') %></h4>
+      <div class='card-body'>
+        <h5 class='card-title text-center mb-5'><%= t('.select_filters') %></h5>
+        <%= form_with url: candidates_path, method: :get, local: true do |form| %>
+          <div class='row'>
+            <div class='col-sm-4 text-center'>
+              <%= form.label :city, t('.candidates_from') %>
+              <%= form.text_field :city, placeholder: t('.placeholder.city'), class: 'form-control' %>
+            </div>
+            <div class='col-sm-4 text-center'>
+              <%= form.label :technology, t('.to_work_with') %>
+              <%= form.text_field :technology, placeholder: t('.placeholder.technology'), class: 'form-control' %>
+            </div>
+            <div class='col-sm-4 text-center'>
+              <%= form.label :experience, t('.those_have') %>
+              <%= form.text_field :experience, placeholder: t('.placeholder.experience'), class: 'form-control' %>
+            </div>
+          </div>
+          <div class='row mt-4'>
+            <div class='col-sm text-center'>
+              <%= form.submit t('.button.search'), class: 'btn btn-outline-secondary px-4 py-2' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
